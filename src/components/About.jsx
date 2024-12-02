@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Avatar } from "@nextui-org/react";
 import { assets } from "../assets/assets";
 
 const About = () => {
@@ -74,47 +73,57 @@ const About = () => {
 
         {/* Content Wrapper */}
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 relative z-10">
-          {/* Left Column - Image and Avatar */}
-          <motion.div
-            className="lg:w-1/3 flex flex-col items-center lg:items-start"
-            initial={{ x: -50, opacity: 0 }}
-            animate={{ x: isInView ? 0 : -50, opacity: isInView ? 1 : 0 }}
-            transition={{ duration: 1 }}
-          >
-            <Avatar
-              src={assets.avatar}
-              size="xl"
-              color="primary"
-              bordered
-              zoomed
-              className="mb-10 my-8"
-            />
-            <Avatar
-              src={assets.key}
-              size="xl"
-              color="primary"
-              bordered
-              zoomed
-              className="mb-10 my-8"
-            />
-            <Avatar
-              src={assets.philo}
-              size="xl"
-              color="primary"
-              bordered
-              zoomed
-              className="mb-6 my-8 mx-20"
-            />
-          </motion.div>
+          {/* Left Column - Images */}
+          <div className="lg:w-1/3 flex flex-col items-center lg:items-start space-y-12">
+            {/* First Image - Introduction */}
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: isInView ? 0 : -50, opacity: isInView ? 1 : 0 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src={assets.avatar}
+                alt="Introduction"
+                className="w-40 h-40 rounded-full object-cover"
+              />
+              <h3 className="text-xl font-semibold mt-4">Introduction</h3>
+            </motion.div>
 
-          {/* Right Column - Details */}
-          <motion.div
-            className="lg:w-2/3 flex flex-col space-y-6"
-            initial={{ x: 50, opacity: 0 }}
-            animate={{ x: isInView ? 0 : 50, opacity: isInView ? 1 : 0 }}
-            transition={{ duration: 1 }}
-          >
-            {/* Introduction */}
+            {/* Second Image - Key Achievements */}
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: isInView ? 0 : -50, opacity: isInView ? 1 : 0 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src={assets.key}
+                alt="Key Achievements"
+                className="w-40 h-40 rounded-full object-cover"
+              />
+              <h3 className="text-xl font-semibold mt-4">Key Achievements</h3>
+            </motion.div>
+
+            {/* Third Image - HR Philosophy */}
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: isInView ? 0 : -50, opacity: isInView ? 1 : 0 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                src={assets.philo}
+                alt="HR Philosophy"
+                className="w-40 h-40 rounded-full object-cover"
+              />
+              <h3 className="text-xl font-semibold mt-4">My HR Philosophy</h3>
+            </motion.div>
+          </div>
+
+          {/* Right Column - Content */}
+          <div className="lg:w-2/3 flex flex-col space-y-12">
+            {/* Introduction Content */}
             <motion.div
               className="bg-white rounded-lg shadow-lg p-6 lg:p-8"
               initial={{ opacity: 0, x: 50 }}
@@ -123,12 +132,12 @@ const About = () => {
             >
               <h3 className="text-2xl font-bold text-teal-600">Who Am I?</h3>
               <p className="mt-4 text-gray-600 leading-relaxed">
-                I am an HR professional with a decade of experience specializing in recruitment, talent acquisition, and employee engagement. 
+                I am an HR professional with a decade of experience specializing in recruitment, talent acquisition, and employee engagement.
                 My mission is to align organizational goals with employee aspirations, driving mutual growth and satisfaction.
               </p>
             </motion.div>
 
-            {/* Key Achievements */}
+            {/* Key Achievements Content */}
             <motion.div
               className="bg-teal-50 rounded-lg shadow-lg p-6 lg:p-8"
               initial={{ opacity: 0, x: 50 }}
@@ -152,7 +161,7 @@ const About = () => {
               </ul>
             </motion.div>
 
-            {/* HR Philosophy */}
+            {/* HR Philosophy Content */}
             <motion.div
               className="bg-gradient-to-r from-teal-600 to-blue-600 text-white rounded-lg shadow-lg p-6 lg:p-8"
               initial={{ opacity: 0, x: 50 }}
@@ -165,7 +174,7 @@ const About = () => {
                 I strive to create workplaces that inspire and empower individuals to achieve their fullest potential."
               </p>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
