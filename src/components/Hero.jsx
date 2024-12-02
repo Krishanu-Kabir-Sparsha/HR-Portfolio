@@ -49,7 +49,7 @@ const Hero = () => {
         transition={{ duration: 1 }}
       >
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-teal-300">
-          John Doe
+          Danial Priest
         </h1>
         <motion.p
           key={currentDetail}
@@ -62,7 +62,7 @@ const Hero = () => {
           {details[currentDetail]}
         </motion.p>
         <p className="text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
-          With over 10 years of experience in HR leadership, John specializes in bridging organizational goals with employee aspirations. He is passionate about creating sustainable talent strategies for long-term growth.
+          With over 10 years of experience in HR leadership, Dan specializes in bridging organizational goals with employee aspirations. He is passionate about creating sustainable talent strategies for long-term growth.
         </p>
         <motion.button
           whileHover={{ scale: 1.1 }}

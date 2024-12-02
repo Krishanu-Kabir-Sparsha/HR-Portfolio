@@ -1,3 +1,4 @@
+import logo from '../assets/logo.png';
 import award from '../assets/award.jpg';
 import profile from '../assets/profile.jpg';
 import workEnvironment from '../assets/work-environment.jpg';
@@ -11,5 +12,5 @@ import sp from "../assets/sophia.jpg";
 import mc from "../assets/mc.jpg"
 
 export const assets = {
-    award, profile, workEnvironment, avatar, key, philo, camp, engage, alx, sp, mc
+    logo, award, profile, workEnvironment, avatar, key, philo, camp, engage, alx, sp, mc
 };
