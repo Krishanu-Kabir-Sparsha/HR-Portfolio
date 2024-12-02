@@ -1,0 +1,8 @@
+/* This is optional if you want to apply extra styles to a wrapper component */
+.layout-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
